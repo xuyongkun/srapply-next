@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install *)",
+      "Bash(/home/kenny/cursor-project/srapply-next/backend/venv/bin/python -c \"from app.main import app; print\\('OK'\\)\")",
+      "Bash(/home/kenny/cursor-project/srapply-next/backend/venv/bin/pip install *)",
+      "Bash(/home/kenny/cursor-project/srapply-next/backend/venv/bin/python -m pytest /home/kenny/cursor-project/srapply-next/backend/tests/ -v)",
+      "Bash(rm -f /tmp/test_chat.db)",
+      "Bash(/home/kenny/cursor-project/srapply-next/backend/venv/bin/python -c ' *)",
+      "Bash(rm -f /tmp/test_debug5.db)",
+      "Bash(rm -f /tmp/test_chat2.db)",
+      "Bash(/home/kenny/cursor-project/srapply-next/backend/venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000)",
+      "Bash(curl -s http://127.0.0.1:8000/health)",
+      "Bash(curl -s -X POST http://127.0.0.1:8000/api/auth/login -H \"Content-Type: application/json\" -d '{\"username\":\"admin\",\"password\":\"admin123\"}')",
+      "Bash(kill %1)",
+      "Bash(npm run *)",
+      "Bash(npm install *)",
+      "Bash(fuser -k 8000/tcp)"
+    ]
+  }
+}
