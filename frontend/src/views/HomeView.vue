@@ -144,7 +144,7 @@ const brandName = () => info.value?.brand || "申荣留学";
     </section>
 
     <!-- ══════ Features ══════ -->
-    <section id="features" class="section" style="background:#fff">
+    <section id="features" class="section section-alt">
       <div class="section-inner">
         <div class="section-header">
           <h2>我们的优势</h2>
@@ -195,7 +195,7 @@ const brandName = () => info.value?.brand || "申荣留学";
     </section>
 
     <!-- ══════ Team ══════ -->
-    <section id="team" class="section" style="background:#fff">
+    <section id="team" class="section section-alt">
       <div class="section-inner">
         <div class="section-header">
           <h2>顾问团队</h2>

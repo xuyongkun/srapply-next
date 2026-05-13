@@ -4,5 +4,5 @@ python-dotenv
 pydantic
 httpx
 passlib[bcrypt]==1.7.4
-bcrypt==4.2.1
+bcrypt==4.0.1
 python-jose[cryptography]==3.3.0

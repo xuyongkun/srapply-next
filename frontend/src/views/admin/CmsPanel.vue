@@ -32,28 +32,38 @@ onMounted(fetchCms);
 </script>
 
 <template>
-  <div class="cms-grid">
-    <div class="card">
-      <h3>新增留学案例</h3>
-      <input v-model="caseForm.title" placeholder="标题" />
-      <input v-model="caseForm.country" placeholder="国家" />
-      <input v-model="caseForm.major" placeholder="专业" />
-      <textarea v-model="caseForm.summary" placeholder="摘要" />
-      <button @click="createCase">新增案例</button>
-      <ul>
-        <li v-for="item in cases" :key="item.id">{{ item.title }} - {{ item.country }} / {{ item.major }}</li>
-      </ul>
+  <div class="admin-card-stack">
+    <div class="admin-page-head">
+      <h1 class="admin-page-title">案例与顾问 CMS</h1>
+      <p class="admin-page-sub">维护官网展示的成功案例与顾问信息</p>
     </div>
-    <div class="card">
-      <h3>新增顾问</h3>
-      <input v-model="advisorForm.name" placeholder="姓名" />
-      <input v-model="advisorForm.title" placeholder="职称" />
-      <input v-model="advisorForm.specialties" placeholder="擅长方向" />
-      <textarea v-model="advisorForm.bio" placeholder="简介" />
-      <button @click="createAdvisor">新增顾问</button>
-      <ul>
-        <li v-for="item in advisors" :key="item.id">{{ item.name }} - {{ item.title }}</li>
-      </ul>
+
+    <div class="cms-grid">
+      <div class="admin-panel-card admin-panel-card--static">
+        <span class="admin-card-label">内容</span>
+        <h2 class="admin-card-title">新增留学案例</h2>
+        <input v-model="caseForm.title" placeholder="标题" />
+        <input v-model="caseForm.country" placeholder="国家" />
+        <input v-model="caseForm.major" placeholder="专业" />
+        <textarea v-model="caseForm.summary" placeholder="摘要" />
+        <button type="button" class="admin-btn-primary" @click="createCase">新增案例</button>
+        <ul class="admin-cms-list">
+          <li v-for="item in cases" :key="item.id">{{ item.title }} — {{ item.country }} / {{ item.major }}</li>
+        </ul>
+      </div>
+
+      <div class="admin-panel-card admin-panel-card--static">
+        <span class="admin-card-label">团队</span>
+        <h2 class="admin-card-title">新增顾问</h2>
+        <input v-model="advisorForm.name" placeholder="姓名" />
+        <input v-model="advisorForm.title" placeholder="职称" />
+        <input v-model="advisorForm.specialties" placeholder="擅长方向" />
+        <textarea v-model="advisorForm.bio" placeholder="简介" />
+        <button type="button" class="admin-btn-primary" @click="createAdvisor">新增顾问</button>
+        <ul class="admin-cms-list">
+          <li v-for="item in advisors" :key="item.id">{{ item.name }} — {{ item.title }}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
